@@ -1,0 +1,95 @@
+body {
+    background-image: url("../img/1.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+#main-img {
+    background-image: url("../img/2.png");
+	height: 250px;
+	background-repeat: no-repeat;
+	margin-left: 400px;
+}
+
+.main-style {
+    background: rgb(92, 66, 43);
+    border-color: rgb(92, 66, 43);
+}
+
+#app-title {
+	font-family: 'Staatliches', cursive;
+	font-size: 80px;
+	color: white;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.statement {
+    font-size: 26px;
+    color: white;
+}
+
+.text-color {
+    color: white;
+    font-size: 22px;
+}
+
+.burger-color {
+    color: black;
+}
+.button-color {
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:linear-gradient(to bottom, #fe1a00 5%, #ff8a8a 100%);
+	background-color:#fe1a00;
+	border-radius:20px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:10px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.button-color:hover {
+	background:linear-gradient(to bottom, #ff8a8a 5%, #fe1a00 100%);
+	background-color:#ff8a8a;
+}
+.button-color:active {
+	position:relative;
+	top:1px;
+}
+
+.social-button {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	background-color:#79bbff;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 18px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #528ecc;
+}
+.social-button:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.social-button:active {
+	position:relative;
+	top:1px;
+}
+
+.devoured-border {
+    border-bottom: dotted black 1px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,94 @@
+<div class="container">
+    <!--Jumbotron-->
+    <div class="jumbotron text-center main-style">
+        <h1 id="app-title">Burger Central </h1> 
+        <p class="statement">Welcome to Burger Central!</p>
+        <div id="main-img"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card border">
+                <div class="card-header main-style text-color">
+                    Can I take your order?
+                </div>
+                <!--Create/add burger form-->
+                <div class="card-body">
+                    <form class="create-form">
+                        <div class="form-group">
+                            <label for="burger">Place order here:</label>
+                            <input type="text" class="form-control" id="burgerToGo" placeholder="">
+                        </div>
+                        <button class="btn btn-primary button-color" type="submit"><i class="fas fa-hamburger"></i>
+                            Place order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card border">
+                <div class="card-header main-style text-color">
+                    Burgers
+                </div>
+                <!--Div to hold burgers that have not been devoured yet-->
+                <div class="card-body">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devour=false}}
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card devoured-card">
+                <div class="card-header text-color main-style" id="devoured-card-header">
+                    Devoured burgers
+                </div>
+                <!--When a burger has been devoured, put burger here-->
+                <div class="card-body burger-color">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-devoured devour=true}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="card footer">
+                <div class="card-body footer-body">
+                    <h5 class="card-title text-white">Burger Central</h5>
+                    <p class="card-text">Welcome to Burger Burger. Home of the Best Burger in Town.</p>
+                    <a href="https://github.com/RafaelDe-Leon/Burger" class="btn btn-primary social-button mr-2"
+                        target="_blank">GitHub Repo</a>
+                    <a href="https://www.linkedin.com/in/rafaeldeleon88/" class="btn btn-primary social-button"
+                        target="_blank">LinkedIn</a>
+                    <br>
+                    <br>
+
+                    <small>Photo by James Sutton on Unsplash</small>
+                    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+                        href="https://unsplash.com/@jamessutton_photography?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                        target="_blank" rel="noopener noreferrer"
+                        title="Download free do whatever you want high-resolution photos from James Sutton"><span
+                            style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                                viewBox="0 0 32 32">
+                                <title>unsplash-logo</title>
+                                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                            </svg></span><span style="display:inline-block;padding:2px 3px">James Sutton</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
